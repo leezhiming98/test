@@ -1,3 +1,3 @@
 # test
 Hello World!
-I am new to Git and GitHub!
+\nI am new to Git and GitHub!
