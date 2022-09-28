@@ -1,6 +1,5 @@
 # test
 **Hello World!**  
 I am new to Git and GitHub!  
->Markdown Editor
----
+>Markdown Editor  
 >Git is Fun!
