@@ -1,0 +1,30 @@
+name: Delete Workflow Runs
+
+on: [push]
+
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"
+
+jobs:
+  delete-workflow-runs:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Delete Workflow Runs
+        uses: leezhiming98/delete-workflow-runs@v1.9.1
+        with:
+          token: ${{ github.token }}
+          owner: leezhiming98
+          repo: test
+          branch_type: all
+          branch_prefix: revert-4-sub,APP1/
+          retain_days: 1
+###
+# branch_type - protected|unprotected|all
+# call the workflow once, if all branches having the same retain days or if only one branch type is calling the workflow
+# eg. all - 30 days
+# call the workflow twice, if protected and unprotected branches having different retain days
+# eg. protected - 30 days | unprotected - 7 days
+###
