@@ -18,9 +18,9 @@ jobs:
           token: ${{ github.token }}
           owner: leezhiming98
           repo: test
-          branch_type: unprotected
-          branch_prefix: revert-4-sub,APP1/,APP2
-          retain_days: 0
+          branch_type: all
+          branch_prefix: sub
+          retain_days: 100
 ###
 # branch_type - protected|unprotected|all
 # call the workflow once, if all branches having the same retain days or if only one branch type is calling the workflow
