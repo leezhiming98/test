@@ -18,8 +18,8 @@ jobs:
           token: ${{ github.token }}
           owner: leezhiming98
           repo: test
-          branch_type: protected
-          branch_prefix: revert-4-sub,APP1/
+          branch_type: unprotected
+          branch_prefix: revert-4-sub,APP1/,APP2
           retain_days: 0
 ###
 # branch_type - protected|unprotected|all
